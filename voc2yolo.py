@@ -94,8 +94,13 @@ def convert_dataset(xml_dir, output_dir, class_names):
 
 
 if __name__ == "__main__":
-    # 设置类别名称（根据你的数据集修改）
-    class_names = ['person', 'car', 'dog']  # 示例类别
+    # VOC2007 和 2012数据集的20个类别
+    class_names = [
+        'aeroplane', 'bicycle', 'bird', 'boat', 'bottle',
+        'bus', 'car', 'cat', 'chair', 'cow',
+        'diningtable', 'dog', 'horse', 'motorbike', 'person',
+        'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor'
+    ]
     # 设置输入输出目录
     xml_dir = r"D:\xiaotudui\Dataset\VOC-2007\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\Annotations"  # VOC格式XML文件目录
     output_dir = r"D:\xiaotudui\Dataset\VOC-2007\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\YOLO"  # YOLO格式标注输出目录
