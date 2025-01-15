@@ -53,12 +53,6 @@ def convert_voc_to_yolo(xml_file, class_names):
         width = (xmax - xmin) / img_width
         height = (ymax - ymin) / img_height
 
-        # 确保值在0-1范围内
-        x_center = min(max(x_center, 0), 1)
-        y_center = min(max(y_center, 0), 1)
-        width = min(max(width, 0), 1)
-        height = min(max(height, 0), 1)
-
         yolo_annotations.append(f"{class_idx} {x_center:.6f} {y_center:.6f} {width:.6f} {height:.6f}")
 
     return yolo_annotations
